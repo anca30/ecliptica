@@ -15,10 +15,6 @@
 <body>
   <?php include('common/navbar.php'); ?>
  
- <!-- <div class="container">
-    <h3>Welcome!</h3>
-    <p></p>
-  </div>-->
 
   <!--<?php
 /*if(isset($_POST['currentTabUrl'])){
