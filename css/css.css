@@ -1,0 +1,76 @@
+
+
+.button {
+  background-color: #36486b; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  width: 40%;
+  background-color: #36486b;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #36486b;
+}
+li a:hover {
+  background-color: #8ca3a3;
+}
+      
+li a:hover:not(.active) {
+  background-color: #8ca3a3;
+}
+
+.active {
+  background-color: #8ca3a3;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #36486b;
+  font-family: "AR DARLING";
+  font-size: 20px;
+}
+
+IMG.displayed {
+    display: block;
+    margin-left: ;
+    margin-right:auto ;  }
+
+.footer {
+  background: #36486b;
+  padding: 10px 0;
+}
+.footer a {
+  color: #70726F;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+.footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+.footer a:hover {
+  color: white;
+}
+
+
+

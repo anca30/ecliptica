@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Ecliptica",
+  "description": "This extension allows the user to get the current url.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "images/cart.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "http://*/",
+    "https://*/"
+  ], 
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/"], //where your script should be injected
+      "css": ["css/css.css"] //the name of the file to be injected
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
+
+}
