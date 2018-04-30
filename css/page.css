@@ -69,3 +69,9 @@ body {
 .footer a:hover {
   color: white;
 }
+
+h2{
+  margin-left: 20%;
+    font-family: "Times New roman";
+    font-size: 20px;
+}

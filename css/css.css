@@ -26,6 +26,8 @@
 
 .navbar {
   background-color: #36486b;
+  margin-bottom: 0;
+  border-radius: 0;
 }
 li a:hover {
   background-color: #8ca3a3;
