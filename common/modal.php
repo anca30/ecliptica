@@ -1,27 +1,30 @@
-<div class="modal">
-  <h2>Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<?php
+  $db = include('../common/db.php');
+  session_start();
+  if (isset($_POST['url'])) {
+    $url = $_POST['url'];
+    $conn = new mysqli($db['host'], $db['user'], $db['password'], $db['dbname'], $db['port'], $db['socket'])
+    or die ('Could not connect to the database server' . mysqli_connect_error());
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
+    // SELECT id FROM users WHERE email = $_SESSION[email]
+    $id = -1;
+    $idQuery = "SELECT id FROM users WHERE email = '" . $_SESSION["email"] . "';";
+    $result = $conn->query($idQuery);
+    if($result->num_rows == 1) {
+      $row = $result->fetch_assoc();
+      $id = $row["id"];
+      $insertUrl = "INSERT INTO  url (url, user) VALUES ('$url', '$id');";
+      if ($conn->query($insertUrl) === TRUE) {
+        echo "success";
+      } else {
+          echo "Error: " . $insertUrl . "<br>" . $conn->error;
+      }
+    } else {
+      echo "fail";
+    } 
+
+    $conn->close();
+  }
+
+?>
+

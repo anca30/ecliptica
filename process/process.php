@@ -1,17 +1,14 @@
 <?php
+	$db = include('../common/db.php');
+
 	if (isset($_POST['login'])) {
 		$loginInfo = explode(" ", $_POST['login']);
         $email = $loginInfo[0];
         $passwd = $loginInfo[1];
 
-		$host="127.0.0.1";
-		$port=3306;
-		$socket="";
-		$user="root";
-		$password="root";
-		$dbname="shop";
+ 
 
-		$conn = new mysqli($host, $user, $password, $dbname, $port, $socket)
+		$conn = new mysqli($db['host'], $db['user'], $db['password'], $db['dbname'], $db['port'], $db['socket'])
 		or die ('Could not connect to the database server' . mysqli_connect_error());
 		$err = "";
 

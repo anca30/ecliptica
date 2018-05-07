@@ -24,6 +24,7 @@ function validateSignIn() {
 			} else if(response == "fail") {
 				alert('Login failed');
 			}	
+            alert(response);
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
 			console.log(textStatus, errorThrown);
