@@ -9,9 +9,14 @@
 <?php
 	//echo 'test';
 
-	$url = 'http://www.elefant.ro/carti/carte/religie/studii-religioase/religii-idei-fundamentale-1004607.html';
+	$url = 'https://www.emag.ro/servetele-umede-pampers-fresh-clean-baby-12-pachete-x-64-768-bucati-4015400622598/pd/D6B68KBBM/?ref=hp_prod_widget_live_asp_3_2&recid=rec_2_rec_2_9a375ce30ab1109ced5b06b88997a79f_1525767883=6';
 	
-
+echo $url;
+$info = array(
+        'grant_type' =>'client_credentials'
+);
+ $post_field_string = http_build_query($info, '', '&');
+echo "</br>";
 		$headers = array(
 		    "Accept-Language: en-us",
 		    "User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30)",
@@ -22,6 +27,8 @@
 		$referer = 'http://www.google.com/search';
 
 		$get = curl_init($url);
+		curl_setopt($get, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Accept-Language: en_US')
+); 
 
 		curl_setopt($get, CURLOPT_HTTPHEADER, $headers); // this pretends this scraper to be browser client IE6 on Windows XP, of course you can pretend to be other browsers just you have to know the correct headers
 
@@ -29,9 +36,22 @@
 
 		
 	    curl_setopt($get, CURLOPT_RETURNTRANSFER, 1);
-		
+	    curl_setopt($get, CURLOPT_SSL_VERIFYPEER, FALSE);
+		curl_setopt($get, CURLOPT_SSL_VERIFYHOST, FALSE);
+		curl_setopt($get, CURLOPT_USERPWD,'ATKsMxDPf23rhQTgixcTYxLfuJoBsTiIRyaSQW_4J8_rNoVQsXHQkBjmBN0z:EOvF6RBizzf9qH2eA_s3PYmQk--smR6Xe8kDws228lq5pA0IebXTg902FY7f');
+curl_setopt($get, CURLOPT_POSTFIELDS, $post_field_string);
+curl_setopt($get,CURLOPT_POST,1);
+curl_setopt($get, CURLOPT_HEADER,1); 
+$exec = curl_exec($get);
+echo '<pre>';
+print_r($exec);
+curl_close($get);
 
 	    $html = curl_exec($get);
+	   	$fp = fopen("test1.php", "w");
+	   	echo "lala";
+	   	echo $fp;
+ 	    fwrite($fp, $html);
 
 		
 
