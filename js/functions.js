@@ -95,3 +95,46 @@ function validateSignUp() {
 		}
 	});      
 }
+
+function searchInTable() {
+    var input = document.getElementById("searchInput");
+    var filter = input.value.toUpperCase();
+    var table = document.getElementById("productsTable");
+    var tr = table.getElementsByTagName("tr");
+    
+    for (var i = 0; i < tr.length; i++) {
+        var tdName = tr[i].getElementsByTagName("td")[0];
+        var tdBrand = tr[i].getElementsByTagName("td")[1];
+        if (tdName && tdBrand) {
+            var productNameElem = tdName.getElementsByTagName("a")[0];
+            
+            if (productNameElem) {
+                var productName = productNameElem.innerText;
+                var productBrand = tdBrand.innerText;
+
+                if (productName.toUpperCase().indexOf(filter) > -1 || productBrand.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }       
+    }
+}
+
+function getProductsTable() {
+    $.ajax({
+        url: "process/processList.php",
+        type: "post",
+        data: {getProducts: "getProducts"},
+        success: function (response) {
+            if(response) {
+                document.getElementById("productsTable").innerHTML = response;
+                document.getElementById("tableLoader").style.display = "none"; 
+            }   
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus, errorThrown);
+        }
+    });   
+}

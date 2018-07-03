@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="css/search.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -21,22 +24,6 @@
         }
       ?>
     </ul>
-
-    <?php
-      if (basename(__FILE__) == 'list.php') {
-        echo 
-          '<div class="col-sm-3 col-md-3">
-              <form class="navbar-form" role="search">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search" name="q">
-                  <div class="input-group-btn">
-                      <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                  </div>
-                </div>
-              </form>
-          </div>';
-      }
-    ?>
 
     <ul class="nav navbar-nav navbar-right">
       <?php

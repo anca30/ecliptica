@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/css.css" type="text/css">
   <link rel="stylesheet" href="css/page.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="cart.png" type="image/png"/>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
 <IMG class="displayed" src="images/logo.jpg" alt="ecliptica">
 
 <div class="container">
-  <h2>Welcome to Ecliptica!</h2>  
+  <h2></h2>  
   <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 640px; height: 360px; margin: auto;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -40,7 +41,7 @@
       <div class="item active">
         <img src="images/carusel1.jpg" alt="Los Angeles" style="width:640px; height: 360px">
          <div class="carousel-caption">
-          <h3 style="font-size:2vw;">Add any prduct you want!</h3>
+          <h3 style="font-size:2vw;">Add any product you want!</h3>
           <p></p>
         </div>
       </div>
@@ -49,7 +50,7 @@
       <div class="item">
         <img src="images/carusel2.jpg" alt="Chicago" style="width:640px; height: 360px">
          <div class="carousel-caption">
-          <h3>Everything you want in just one place!</h3>
+          <h3>Everything you want in one place!</h3>
           <p></p>
         </div>
       </div>
@@ -58,7 +59,7 @@
       <div class="item">
         <img src="images/carusel3.jpg" alt="New york" style="width:640px; height: 360px">
         <div class="carousel-caption">
-          <h3>Find out the price of all your products!</h3>
+          <h3>Total of your products!</h3>
           <p></p>
         </div>
       </div>
@@ -78,17 +79,7 @@
 <br>
 </br>
 <br/>
-<div class="container1">
-  <div class="row">
-    <div class="col-lg-12">
-      <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#deleteConfirmation">
-         Delete
-      </button>
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addContact">
-         Add New Contact
-      </button>
-    </div>
-  </div>
+
 
 
 <!-- Modal 1 -->

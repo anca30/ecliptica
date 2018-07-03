@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/page.css" type="text/css">
     <script type="text/javascript" src="js/functions.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="icon" href="cart.png" type="image/png"/>
   </head>
             
     <body>
@@ -84,15 +85,15 @@
                         <div class="col-md-offset-3 col-md-9">
                              <!--<a id="btn-login" href="#" class="btn btn-success" onclick="validateSignUp()">Sign In  </a>-->
                             <button id="btn-signup" type="button" class="btn btn-info" style="background-color: #36486b; border: 2px solid  #36486b;" onclick="validateSignUp()" ><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-                                        <span style="margin-left:8px;">or</span>  
+                                        <!-- <span style="margin-left:8px;">or</span>   -->
                         </div>
                     </div>
-                    <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+                   <!--  <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
                         <div class="col-md-offset-3 col-md-9">
                             <button id="btn-fbsignup" type="button" class="btn btn-primary" style="background color: #36486b;"><i class="icon-facebook"></i>   Sign Up with Google</button>
                         </div>                                           
                                         
-                    </div>
+                    </div> -->
                  </form>     
 
         </div>                     

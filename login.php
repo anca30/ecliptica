@@ -14,7 +14,8 @@
 	    <link rel="stylesheet" href="css/css.css" type="text/css">
 	    <link rel="stylesheet" href="css/page.css" type="text/css">
 	    <script type="text/javascript" src="js/functions.js"></script>
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	    <link rel="icon" href="cart.png" type="image/png"/> 
   	</head>
             
   	<body>
@@ -42,17 +43,17 @@
 	                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
 	                                    <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
 	                        	</div>
-								<div class="input-group">
+								<!-- <div class="input-group">
 	                                  <div class="checkbox">
 	                                    <label>
 	                                      <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
 	                                    </label>
 	                                  </div>
-	                        	</div>
+	                        	</div> -->
 							    <div style="margin-top:10px" class="form-group">
 	                              <div class="col-sm-12 controls">
 	                                  <a id="btn-login" href="#" class="btn btn-success" onclick="validateSignIn()">Login  </a>
-	                                  <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Google</a></div>
+	                                  <!-- <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Google</a></div> -->
 	                            </div>
 	                    	</form>     
 	                	</div>                     

@@ -56,3 +56,16 @@ $headers = array(
 
 	?>
 	</html>
+
+
+
+<html>
+	<head>
+		<title>Titlu</title>
+	</head>
+
+	<body>
+		<p>Paragraf...</p>
+	</body>
+</html>
+

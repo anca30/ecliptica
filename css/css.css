@@ -54,25 +54,33 @@ ul {
 IMG.displayed {
     display: block;
     margin-left: ;
-    margin-right:auto ;  }
-
-.footer {
-  background: #36486b;
-  padding: 10px 0;
-}
-.footer a {
-  color: #70726F;
-  font-size: 20px;
-  padding: 10px;
-  border-right: 1px solid #70726F;
-  transition: all .5s ease;
-}
-.footer a:first-child {
-  border-left: 1px solid #70726F;
-}
-.footer a:hover {
-  color: white;
+    margin-right:auto ;  
 }
 
+/*i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
 
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
 
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+*/

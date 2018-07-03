@@ -34,17 +34,10 @@ function getCurrentTabUrl() {
     // "url" properties.
     console.assert(typeof url == 'string', 'tab.url should be a string');
 	  console.log(url);
-    testing(url);
+    sendData(url);
   });
 
-  // Most methods of the Chrome extension APIs are asynchronous. This means that
-  // you CANNOT do something like this:
-  //
-  // var url;
-  // chrome.tabs.query(queryInfo, (tabs) => {
-  //   url = tabs[0].url;
-  // });
-  // alert(url); // Shows "undefined", because chrome.tabs.query is async.
+
 }
 
 document.addEventListener("DOMContentLoaded", buttonAction);
@@ -54,7 +47,7 @@ function buttonAction() {
   mybutton.addEventListener("click", getCurrentTabUrl);
 }
 
-function testing(url) {
+function sendData(url) {
   
   document.getElementById("test").innerHTML = url;
 

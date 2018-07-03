@@ -1,0 +1,2 @@
+<br />
+<b>Warning</b>:  curl_setopt(): cannot represent a stream of type Output as a STDIO FILE* in <b>C:\Apache24\htdocs\Shop\process\debug.php</b> on line <b>81</b><br />
